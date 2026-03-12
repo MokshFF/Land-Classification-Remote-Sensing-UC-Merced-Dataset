@@ -1,67 +1,79 @@
 # Land-Classification-Remote-Sensing-UC-Merced-Dataset
 Remote sensing land-use classification using ResNet CNN architecture trained on the UC Merced Land Use dataset.
 
+
 # Land Use Classification using ResNet
 
 ## Project Overview
 
-This project performs land-use classification on satellite images using deep learning.
-A ResNet convolutional neural network is trained on the UC Merced Land Use dataset to automatically classify aerial images into different land categories such as forest, residential areas, golf courses, and highways.
+This project performs land-use classification on aerial or satellite images using deep learning. A Residual Neural Network (ResNet) model is trained to classify images into different land-use categories such as forest, residential areas, golf courses, and highways.
 
-The goal of this project is to demonstrate how deep learning models can be used for remote sensing image classification.
+The system demonstrates how deep learning and computer vision can be applied to remote sensing data for automatic land classification.
 
 ## Dataset
 
-The project uses the **UC Merced Land Use Dataset**, which contains aerial images from different land use classes.
+The project uses the **UC Merced Land Use Dataset**.
 
-Dataset characteristics:
+Dataset link:
+https://www.kaggle.com/datasets/abdulhasibuddin/uc-merced-land-use-dataset
+
+Dataset details:
 
 * 21 land use classes
 * 100 images per class
+* Total images: 2100
 * Image size: 256 × 256 pixels
 * RGB aerial images
 
+The images were extracted from the USGS National Map Urban Area Imagery collection and are widely used in research for land-use classification tasks. ([Hugging Face][1])
+
 Example classes include:
 
+* Agricultural
+* Airplane
+* Baseball Diamond
+* Beach
+* Buildings
+* Dense Residential
 * Forest
 * Freeway
 * Golf Course
-* Dense Residential
-* Agricultural land
+* Harbor
+* Runway
+* Storage Tanks
+* Tennis Court
 
 ## Model
 
-The project uses **ResNet (Residual Neural Network)** architecture.
+The project uses **ResNet (Residual Neural Network)** architecture for image classification.
 
-Key features of ResNet:
+Key advantages of ResNet:
 
-* Deep convolutional neural network
-* Uses residual connections to avoid vanishing gradient
-* Allows training of very deep models
+* Solves vanishing gradient problem
+* Allows training of very deep neural networks
+* Provides better accuracy for image classification tasks
 
-Possible models used:
+Possible architectures used:
 
 * ResNet18
 * ResNet50
 
 ## Project Structure
 
-```
-ResNET-Project
-│
+ResNet-LandUse-Classification
+
 ├── dataset
-│   └── UCMerced_LandUse
-│       └── Images
-│           ├── forest
-│           ├── freeway
-│           ├── denseresidential
-│           └── golfcourse
-│
+│ └── UCMerced_LandUse
+│ └── Images
+│ ├── forest
+│ ├── freeway
+│ ├── denseresidential
+│ └── golfcourse
+
 ├── train.py
 ├── test.py
 ├── model.py
 └── README.md
-```
 
 ## Technologies Used
 
@@ -70,42 +82,37 @@ ResNET-Project
 * PyTorch / TensorFlow
 * Computer Vision
 * Remote Sensing
-* CNN Architecture
+* Convolutional Neural Networks (CNN)
 
 ## How to Run the Project
 
 Clone the repository
 
-```
 git clone https://github.com/yourusername/land-use-classification-resnet.git
-```
 
 Install dependencies
 
-```
 pip install -r requirements.txt
-```
 
-Run the training script
+Run training
 
-```
 python train.py
-```
 
-Run prediction
+Run testing
 
-```
 python test.py
-```
 
 ## Applications
 
 * Satellite image analysis
 * Urban planning
 * Environmental monitoring
+* Geographic Information Systems (GIS)
 * Land cover mapping
-* Geographic information systems (GIS)
 
 ## Author
 
 Moksh
+
+[1]: https://huggingface.co/datasets/SatwikKambham/uc_merced_land_use?utm_source=chatgpt.com "SatwikKambham/uc_merced_land_use · Datasets at ..."
+
